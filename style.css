@@ -93,6 +93,7 @@ form {
     padding: 15px;
     padding-right: 0;
     flex-grow: 1;
+    transition: 200ms ease;
 }
 
 .delete-button {
@@ -122,8 +123,23 @@ form {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    transition: 200ms ease;
+    cursor: pointer;
 }
 
 input[type="checkbox"]:checked ~ .custom-checkbox {
     background-color: var(--accent-color);
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox svg {
+    fill: var(--primary-color);
+}
+
+input[type="checkbox"]:checked ~ .todo-text {
+    text-decoration: line-through;
+    color: var(--secondary-color);
+}
+
+input[type="checkbox"] {
+    display: none;
 }
